@@ -1,26 +1,31 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 :root {
   --primary-color: hsl(170, 100%, 26%);
-  --headline: hsla(210, 11%, 15%, 1);
+  --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+
 
   --brand-beige: hsla(39, 100%, 97%, 1);
   --brand-light: hsla(148, 23%, 89%, 1);
+  --brand-dark: hsl(170, 100%, 14%);
 
   --bg-light: hsl(180, 14%, 97%);
 
   --nav-height: 7.2rem;
 
-  font-size: 62.5%;  /* 1 rem = 10px */
+  font-size: 62.5%;
+  /* 1 rem = 10px */
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
+
 html,
 body {
   width: 100%;
@@ -41,7 +46,7 @@ body {
   padding-inline: 2.4rem;
 }
 
-section{
+section {
   padding-block: 10rem;
 }
 
@@ -52,7 +57,8 @@ ul {
 img {
   max-width: 100%;
 }
-section header h4{
+
+section header h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.6rem;
@@ -60,23 +66,58 @@ section header h4{
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
-section header h2{
+
+section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
   color: var(--headline);
 }
-section header h1{
+
+section header h1 {
   font-size: 2.4rem;
   color: var(--headline);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
-section .content p{
-font-weight: 400;
-font-size: 2.4rem;
-line-height: 150%;
-color: var(--paragraph);
+
+section .content p {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: var(--paragraph);
 }
+
+.button {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4rem;
+  padding: 10px;
+  width: fit-content;
+  padding: 1.6rem 3.2rem;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--brand-dark);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
 /* NAVIGARION */
 
 nav {
@@ -96,7 +137,7 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--primary-color);
- 
+
 
 }
 
@@ -138,7 +179,7 @@ body.menu-expanded .close-menu {
   visibility: visible;
 }
 
-.menu{
+.menu {
   transform: translateY(100%);
 }
 
@@ -152,13 +193,11 @@ body.menu-expanded .menu {
 
   padding-top: var(--nav-height);
 
-  transition: transform 300ms ;
+  transition: transform 300ms;
   transform: translateY(0%);
 }
 
-body.menu-expanded nav {
- 
-}
+body.menu-expanded nav {}
 
 .menu ul:nth-child(2) {
   display: flex;
@@ -193,12 +232,6 @@ body.menu-expanded nav {
 
 }
 
-.social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3.2rem;
-}
 
 body.menu-expanded .logo,
 body.menu-expanded button {
@@ -213,6 +246,7 @@ body.menu-expanded .logo path {
 body.menu-expanded button path {
   stroke: #ffffff;
 }
+
 /* home */
 
 #home {
@@ -230,6 +264,10 @@ body.menu-expanded button path {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+#home .button {
+  margin-inline: auto;
 }
 
 #home h4 {
@@ -253,25 +291,7 @@ body.menu-expanded button path {
 
 }
 
-#home button {
-  background: var(--primary-color);
-  border: none;
-  border-radius: 4rem;
-  padding: 10px;
-  width: 26.3rem;
-  height: 6.2rem;
-  margin-bottom: 6rem;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  margin-inline: auto;
 
-}
 
 #home img {
   width: 26.4rem;
@@ -313,50 +333,136 @@ body.menu-expanded button path {
 
 
 /* ===== SERVICES   ======================= */
-#services header h2{
-   margin-bottom: 6rem;
+#services header h2 {
+  margin-bottom: 6rem;
 }
-#services header h4{
+
+#services header h4 {
   font-size: 1.4rem;
-line-height: 150%;
-letter-spacing: 0.08rem;
-color: var(--primary-color);
-text-transform: uppercase;
-margin-bottom: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
 }
-#services header h2{
+
+#services header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
   color: var(--headline);
   margin-bottom: 6rem;
 }
-#services .cards{
+
+#services .cards {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
 }
-#services .card{
- padding: 2.4rem;
- text-align: left;
-background: #FFFFFF;
-border: 1px solid var(--brand-light);
-border-radius: .6rem;
+
+#services .card {
+  padding: 2.4rem;
+  text-align: left;
+  background: #FFFFFF;
+  border: 1px solid var(--brand-light);
+  border-radius: .6rem;
 }
 
 #services .card h3 {
-  margin-block: 1.6rem; 
+  margin-block: 1.6rem;
 }
 
 /* about */
-#about{
-text-align: left;
-background-color: var(--brand-beige);
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
 }
-#about header h2{
+
+#about header h2 {
   margin-bottom: 2.4rem;
 }
 
-#about .content p{
- margin-top: 2.4rem;
- margin-bottom: 6rem;
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
+
+/* ===== contact  ======================= */
+
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+
+/* ===== footer  ======================= */
+
+footer{
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+
+  color: #ffffff;
+}
+footer .logo{
+  display: inline-block;
+  margin-bottom: 2.4rem;
+ 
+}
+
+footer .logo svg{
+  width: 23.6rem;
+  height: 3.1rem;
+ 
+}
+
+footer.logo path{
+  fill: white;
+}
+
+footer p {
+   color:  var(--brand-beige);
+   line-height: 2;
+   
+   margin-bottom: 3.2rem;
+}
+
+footer .social-links{
+  justify-content: flex-start;
+}
+
+/* =======back to top=== */
+
+#backToTopButton{
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: 200ms;
+}
+
+#backToTopButton.show{
+opacity: 1;
+visibility: visible;
+transform:  translateY(0);
 }
