@@ -3,7 +3,19 @@ onScroll()
 function onScroll(){
  showNavOnScroll()
  showBackToTopButtonOnScroll()
+
+ activateMenuAtCurrentSection()
 }
+
+function activateMenuAtCurrentSection(){
+  const targetLine = scrollY + innerHeight / 2
+  
+
+
+}
+
+
+
 
 function showNavOnScroll(){
   if(scrollY > 0 ){
