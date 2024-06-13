@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
@@ -23,7 +25,6 @@
   --nav-height: 7.2rem;
 
   font-size: 62.5%;
-  /* 1 rem = 10px */
 }
 
 html {
@@ -140,11 +141,17 @@ button.open-menu path[stroke*="#00856f"],
 
 body.menu-expanded #navigation .logo path,
 #navigation.scroll .logo path {
+
   fill: #FFFFFF;
+}
+
+#navigation.scroll{
+  background-color: --primary-color;
 }
 
 #navigation.scroll button.open-menu path[stroke*="#00856f"] {
   stroke: #FFFFFF;
+
 }
 
 /* NAVIGAtION */
